@@ -10,7 +10,7 @@
             url : "https://realjudge.le37.tw/",
             complete:function(xhr,textStatus){
                 if(xhr.status==200){
-                    location.href="https://realjudge.le37.tw/";
+                    location.href="https://realjudge.le37.tw"+atob(location.hash.substring(1));
                 }else{
                     console.log(xhr.status);
                 }
