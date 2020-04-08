@@ -1,7 +1,23 @@
 <html>
 
 <head>
-    <title>Judge</title>
+    <title>Judge沉睡中</title>
+    <script src="http://code.jquery.com/jquery-1.5.1.min.js"></script>
+    <script>
+    function CheckJudgeOpen() {
+        $.ajax({
+            type : "GET",
+            url : "https://realjudge.le37.tw/",
+            complete:function(xhr,textStatus){
+                if(xhr.status==200){
+                    location.href="https://realjudge.le37.tw/";
+                }else{
+                    console.log(xhr.status);
+                }
+            }
+        });
+    }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <style type="text/css">
         .paper{
@@ -23,7 +39,8 @@
     </style>
 </head>
 
-<body>
+<body onload="CheckJudgeOpen();">
+    
     <center>
 		<div class="paper">
             <br>
